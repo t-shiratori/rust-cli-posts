@@ -51,7 +51,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "fff857943da45f546682664a79488be82e69e43c1a7a2307679ab9afb3a66d2e"
 
 [[package]]
-name = "cli_news"
+name = "cli_posts"
 version = "0.1.0"
 dependencies = [
  "colour",
