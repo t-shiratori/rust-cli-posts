@@ -3,9 +3,8 @@ use serde::Deserialize;
 use std::error::Error;
 
 #[derive(Deserialize)]
+
 struct Post {
-    // userId: i32,
-    // id: i32,
     title: String,
     body: String,
 }
@@ -29,6 +28,5 @@ fn main() -> Result<(), Box<dyn Error>> {
     let url: &str = "https://jsonplaceholder.typicode.com/posts";
     let posts_result = get_posts(url)?;
     render_posts(&posts_result);
-
     Ok(())
 }
