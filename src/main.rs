@@ -1,4 +1,4 @@
-use colour::{dark_green, yellow, cyan};
+use colour::{dark_green, yellow};
 use serde::Deserialize; 
 use std::error::Error;
 
