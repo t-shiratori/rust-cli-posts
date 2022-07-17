@@ -1,5 +1,5 @@
-use colour::{dark_green, yellow};
-use serde::Deserialize;
+use colour::{dark_green, yellow, cyan};
+use serde::Deserialize; 
 use std::error::Error;
 
 #[derive(Deserialize)]
@@ -13,7 +13,7 @@ type Posts = Vec<Post>;
 
 fn get_posts(url: &str) -> Result<Posts, Box<dyn Error>> {
     let response = ureq::get(url).call()?.into_string()?;
-    let posts: Posts = serde_json::from_str(&response)?;
+    let posts = serde_json::from_str(&response)?; // Vec<Post>型のデータ構造にデシリアライズ
     Ok(posts)
 }
 
